@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groupings",
+  "info": {
+    "name": "grouping"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "service": {
+      "via": "groupings",
+      "collection": "services"
+    }
+  }
+}
