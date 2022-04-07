@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
@@ -5,7 +7,7 @@ module.exports = ({ env }) => ({
       connector: 'bookshelf',
       settings: {
         client: 'sqlite',
-        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+        filename: env('DATABASE_FILENAME', path.join(__dirname, '..', '.tmp/data.db')),
       },
       options: {
         useNullAsDefault: true,
