@@ -115,3 +115,4 @@ exports
 build
 .strapi-updater.json
 admin.js
+jwt.js
